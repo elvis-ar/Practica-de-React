@@ -7,5 +7,5 @@ import './style.css'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <GitExportApp />
-  </StrictMode>,
+  </StrictMode>
 )

@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export const AddCategory = ({ onNewCategory }) => {
 
-    const [imputValue, setInputValue] = useState('')
+    const [imputValue, setInputValue] = useState()
 
     const onInputValue = ( {target} ) => {
         setInputValue(target.value)

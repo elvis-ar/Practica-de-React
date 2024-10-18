@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import { AddCategory } from "./components/addCategory";
+import { AddCategory } from "./components/addCategory"
+import { GifGrid } from './components/GifGrid'
 
 export const GitExportApp = () => {
 
-        const [categories, setCategories] = useState([ 'One Prunch', 'dragon ball z' ])
+        const [categories, setCategories] = useState([ 'One Punch'])
 
         const onAddCategory = ( newCategory) => {
 
@@ -17,23 +18,13 @@ export const GitExportApp = () => {
             <AddCategory 
                 onNewCategory={ (value) => onAddCategory(value) }
             />
-            
-            {
-                categories.map( (category) => (
-                    <gifGrid key={category} category={category} />
-                ) )
-            }
 
-            {/* <ol>
+            
                 {
                     categories.map( ( category )  => ( 
-                        <div key={ category }>
-                            <h3>{ category }</h3>
-                            <li>{ category }</li>
-                        </div>
+                        <GifGrid key={category} category={category} />
                     ) )
                 }
-            </ol> */}
         </>
     )
 }
